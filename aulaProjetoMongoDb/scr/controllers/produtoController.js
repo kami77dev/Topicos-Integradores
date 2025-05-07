@@ -19,6 +19,7 @@ export const produtoController = {
     async obter(req, res, next){
         try{
             const p = await produtoService.obterProduto(req.params.id);
+            res.json(p);
         }catch(err){next(err);}
     },
 
